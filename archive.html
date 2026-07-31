@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Archive: Suburban Tribe: Unmasked (2011-2015), the earlier mask-show version of Kate Mura's solo piece, with full touring history and press.">
+<meta property="og:title" content="Archive: Suburban Tribe: Unmasked | Kate Mura">
+<meta property="og:description" content="The 2011–2015 mask show that became The Play About My Father.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+
+<title>Kate Mura | Archive | Suburban Tribe: Unmasked</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1210;
+    --oxblood:#6E1F2A;
+    --oxblood-deep:#4E1520;
+    --brass:#C4924A;
+    --brass-bright:#D9AA5F;
+    --parchment:#EFE6D8;
+    --bone:#F8F2E7;
+    --rust:#B8542E;
+    --line: rgba(239,230,216,0.16);
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--bone);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; font-weight:600;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color:var(--brass-bright);
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(27,18,16,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .navmark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--bone);
+  }
+  .navmark span{color:var(--brass-bright);}
+  .navlinks{display:flex; gap:26px; font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;}
+  .navlinks a{text-decoration:none; color:var(--parchment); opacity:0.75; transition:opacity .2s, color .2s;}
+  .navlinks a:hover, .navlinks a:focus-visible{opacity:1; color:var(--brass-bright);}
+  .navlinks a:focus-visible{outline:2px solid var(--brass-bright); outline-offset:4px;}
+  @media (max-width:720px){ .navlinks{display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex; align-items:flex-end;
+    overflow:hidden;
+    background:var(--ink);
+    touch-action:pan-y;
+  }
+  .hero-imgstack{
+    position:absolute; inset:0;
+  }
+  .hero-imgstack img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:60% 20%;
+  }
+  .hero-base{ filter:saturate(0.9) brightness(0.75); }
+  .hero-mask-layer{
+    -webkit-mask-image: radial-gradient(circle at var(--mx,50%) var(--my,35%), transparent 0px, transparent 120px, black 190px);
+    mask-image: radial-gradient(circle at var(--mx,50%) var(--my,35%), transparent 0px, transparent 120px, black 190px);
+    filter:contrast(1.05);
+    transition: mask-image 0.06s linear, -webkit-mask-image 0.06s linear;
+  }
+  .hero-scrim{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(27,18,16,0.15) 0%, rgba(27,18,16,0.35) 45%, rgba(27,18,16,0.96) 92%),
+      linear-gradient(90deg, rgba(27,18,16,0.75) 0%, rgba(27,18,16,0.15) 45%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    width:100%;
+    padding-bottom:64px;
+  }
+  .hero-content .wrap{ max-width:var(--maxw); }
+  .hero-eyebrow-row{ display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .hero-rule{ width:36px; height:1px; background:var(--brass); }
+  h1.hero-title{
+    font-size:clamp(3.2rem, 9vw, 7.2rem);
+    line-height:0.92;
+    letter-spacing:-0.01em;
+    color:var(--bone);
+    max-width:14ch;
+  }
+  h1.hero-title em{
+    font-style:italic; color:var(--brass-bright); font-weight:500;
+  }
+  .hero-sub{
+    max-width:46ch;
+    font-size:1.08rem;
+    color:var(--parchment);
+    opacity:0.88;
+    margin-top:20px;
+  }
+  .hero-hint{
+    font-family:'Space Mono',monospace; font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--brass-bright); opacity:0.75; margin-top:10px;
+  }
+  .hero-badges{
+    display:flex; flex-wrap:wrap; gap:12px; margin-top:34px;
+  }
+  .badge{
+    border:1px solid var(--line);
+    background:rgba(239,230,216,0.05);
+    padding:10px 16px;
+    font-size:0.82rem;
+    max-width:340px;
+  }
+  .badge b{ display:block; font-family:'Fraunces',serif; font-style:italic; font-size:1rem; color:var(--bone); font-weight:500; margin-bottom:3px;}
+  .badge span{ color:var(--brass-bright); font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase;}
+  .hero-ctas{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block;
+    font-family:'Space Mono',monospace;
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:14px 26px;
+    text-decoration:none;
+    border:1px solid var(--brass);
+    transition:background .2s, color .2s, transform .15s;
+  }
+  .btn:focus-visible{ outline:2px solid var(--brass-bright); outline-offset:3px; }
+  .btn-solid{ background:var(--brass); color:var(--ink); }
+  .btn-solid:hover{ background:var(--brass-bright); transform:translateY(-1px); }
+  .btn-outline{ color:var(--bone); }
+  .btn-outline:hover{ background:rgba(196,146,74,0.12); transform:translateY(-1px); }
+
+  /* ---------- GENERIC SECTION ---------- */
+  .section{ padding:104px 0; border-bottom:1px solid var(--line); }
+  .section-head{ max-width:640px; margin-bottom:44px; }
+  .section-head h2{ font-size:clamp(2rem,4vw,3rem); margin-top:12px; line-height:1.05; }
+  .section-alt{ background:var(--oxblood-deep); }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  /* ---------- THE SHOW ---------- */
+  .show-grid{ display:grid; grid-template-columns:1.2fr 0.8fr; gap:64px; align-items:start; }
+  .show-copy p{ font-size:1.08rem; color:var(--parchment); }
+  .show-copy p.lede{ font-size:1.28rem; font-family:'Fraunces',serif; font-weight:500; color:var(--bone); line-height:1.45; }
+  .pullquote{
+    border-left:2px solid var(--brass);
+    padding-left:22px;
+    margin:34px 0;
+  }
+  .pullquote p{ font-family:'Fraunces',serif; font-style:italic; font-size:1.18rem; color:var(--bone); font-weight:500; line-height:1.5; margin:0 0 8px; }
+  .pullquote cite{ font-style:normal; font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--brass-bright); }
+  .show-facts{
+    border:1px solid var(--line);
+    padding:28px;
+    background:rgba(239,230,216,0.04);
+  }
+  .show-facts dl{ margin:0; }
+  .show-facts .fact{ padding:14px 0; border-bottom:1px solid var(--line); }
+  .show-facts .fact:last-child{ border-bottom:none; }
+  .show-facts dt{ font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass-bright); margin-bottom:4px; }
+  .show-facts dd{ margin:0; font-family:'Fraunces',serif; font-size:1.05rem; color:var(--bone); }
+  @media (max-width:860px){ .show-grid{ grid-template-columns:1fr; gap:36px; } }
+
+  /* ---------- STORY (mask theft) ---------- */
+  .story{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:center; }
+  .story-art{ position:relative; }
+  .story-art img{ border:1px solid var(--line); }
+  .story-copy p{ color:var(--parchment); font-size:1.05rem; }
+  .story-copy p.big{ font-family:'Fraunces',serif; font-style:italic; font-size:1.5rem; color:var(--brass-bright); font-weight:500; line-height:1.35; }
+  @media (max-width:860px){ .story{ grid-template-columns:1fr; gap:36px; } .story-art{order:2;} .story-copy{order:1;} }
+
+  /* ---------- TOUR TIMELINE ---------- */
+  .timeline{ margin-top:10px; }
+  .tl-row{
+    display:grid; grid-template-columns:110px 1fr; gap:24px;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .tl-row:last-child{ border-bottom:1px solid var(--line); }
+  .tl-year{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--brass-bright); font-weight:600; }
+  .tl-body h3{ font-size:1.15rem; font-weight:600; color:var(--bone); margin-bottom:6px; }
+  .tl-body p{ margin:0; color:var(--parchment); font-size:0.96rem; opacity:0.85; }
+
+  /* ---------- PRESS ---------- */
+  .press-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .press-card{ background:var(--ink); padding:32px 26px; display:flex; flex-direction:column; justify-content:space-between; min-height:230px; }
+  .press-card p{ font-family:'Fraunces',serif; font-style:italic; font-size:1.15rem; color:var(--bone); font-weight:500; line-height:1.45; }
+  .press-card cite{ font-style:normal; display:block; margin-top:18px; font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass-bright); }
+  @media (max-width:860px){ .press-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- BIO ---------- */
+  .bio{ display:grid; grid-template-columns:340px 1fr; gap:64px; }
+  .bio-photo{ position:relative; }
+  .bio-photo img{ width:100%; filter:grayscale(0.15) contrast(1.05); border:1px solid var(--line); }
+  .bio-photo .cap{ font-family:'Space Mono',monospace; font-size:0.64rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--brass-bright); opacity:0.75; margin-top:10px; }
+  .bio-copy .lede{ font-family:'Fraunces',serif; font-style:italic; font-size:1.3rem; color:var(--brass-bright); font-weight:500; }
+  .bio-copy p{ color:var(--parchment); font-size:1.02rem; }
+  .credit-list{ list-style:none; margin:22px 0 0; padding:0; }
+  .credit-list li{
+    padding:12px 0; border-top:1px solid var(--line);
+    font-size:0.98rem; color:var(--parchment);
+  }
+  .credit-list li:last-child{ border-bottom:1px solid var(--line); }
+  @media (max-width:860px){ .bio{ grid-template-columns:1fr; gap:32px; } .bio-photo{ max-width:280px; } }
+
+  /* ---------- CREDITS (playbill) ---------- */
+  .playbill{
+    display:grid; grid-template-columns:1fr 1fr; gap:0 60px;
+    border-top:1px solid var(--line);
+  }
+  .pb-item{ display:grid; grid-template-columns:1fr 1.3fr; gap:14px; padding:16px 0; border-bottom:1px solid var(--line); }
+  .pb-role{ font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--brass-bright); }
+  .pb-name{ font-family:'Fraunces',serif; font-size:1.02rem; color:var(--bone); }
+  @media (max-width:720px){ .playbill{ grid-template-columns:1fr; } }
+  .fuse-block{ margin-top:56px; padding-top:44px; border-top:1px solid var(--line); display:grid; grid-template-columns:120px 1fr; gap:32px; align-items:start; }
+  .fuse-block img{ filter:brightness(0) invert(1); opacity:0.9; }
+  .fuse-block p{ color:var(--parchment); font-size:0.98rem; margin:0; }
+  @media (max-width:720px){ .fuse-block{ grid-template-columns:1fr; } .fuse-block img{ width:90px; } }
+
+  /* ---------- GALLERY ---------- */
+  .gallery{ display:grid; grid-template-columns:1.3fr 1fr; gap:16px; }
+  .gallery img{ width:100%; height:100%; object-fit:cover; border:1px solid var(--line); }
+  .gallery .gcol{ display:grid; gap:16px; }
+  @media (max-width:720px){ .gallery{ grid-template-columns:1fr; } }
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact{
+    background:var(--oxblood);
+    padding:96px 0 60px;
+  }
+  .contact h2{ font-size:clamp(2.2rem,5vw,3.6rem); max-width:16ch; }
+  .contact-grid{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:40px; margin-top:40px; }
+  .contact-links{ display:flex; flex-direction:column; gap:10px; }
+  .contact-links a{
+    font-family:'Fraunces',serif; font-size:1.35rem; text-decoration:none;
+    border-bottom:1px solid transparent; transition:border-color .2s, color .2s;
+  }
+  .contact-links a:hover, .contact-links a:focus-visible{ border-color:var(--bone); }
+  .contact-note{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color:rgba(248,242,231,0.7); max-width:34ch; }
+  footer{ padding:26px 0; text-align:center; font-family:'Space Mono',monospace; font-size:0.66rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(248,242,231,0.4); background:var(--oxblood); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="navmark">KATE MURA <span>· ARCHIVE</span></div>
+    <div class="navlinks">
+      <a href="index.html" style="color:var(--brass-bright); opacity:1;">← Back to EPK</a>
+      <a href="#origin">Origin</a>
+      <a href="#tour">History</a>
+      <a href="#press">Press</a>
+      <a href="#credits">Credits</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-imgstack" id="heroStack">
+    <img class="hero-base" src="images/kate-mura-headshot.jpg" alt="Kate Mura, mid-performance, wide-eyed and expressive.">
+    <img class="hero-mask-layer" id="heroMaskLayer" src="images/suburban-tribe-poster-masks.jpg" alt="">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="hero-eyebrow-row">
+        <div class="hero-rule"></div>
+        <div class="eyebrow">The Archive · 2011 – 2015</div>
+      </div>
+      <h1 class="hero-title">Suburban Tribe<br><em>: Unmasked</em></h1>
+      <p class="hero-sub">Before it became <em>The Play About My Father</em>, this story toured the world for four years as a mask show. Physical storytelling, corporeal mime, improv, and a magic skirt.</p>
+      <p class="hero-hint">Move your cursor across the portrait ↑ to take the mask off</p>
+      <div class="hero-badges">
+        <div class="badge"><b>"It was BRILLIANT! Absolutely SMASHING!"</b><span>The Penning Girl</span></div>
+        <div class="badge"><b>One of Theater Jones' Top 5 Small Tours</b><span>Theater Jones, Dallas</span></div>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="index.html">See the Current Show →</a>
+        <a class="btn btn-outline" href="#origin">Read the Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="show">
+  <div class="wrap">
+    <div class="show-grid">
+      <div class="show-copy reveal">
+        <div class="eyebrow">The Show</div>
+        <h2 style="margin-top:12px; margin-bottom:24px;">A tale of tragedy, kindness, and a lot of casseroles.</h2>
+        <p class="lede">How often do you hear an engaging story where people behave with generosity and kindness, coming together to support a family in need?</p>
+        <p><em>Suburban Tribe</em> is a theatrical "thank you" to the New Jersey community that rallied around Kate Mura's family after her father's freak accident. Told through physical storytelling, corporeal mime, and improv, it shifts from tragedy to acceptance by way of the race track, a few ghosts, and lots and lots of casseroles.</p>
+        <div class="pullquote">
+          <p>"In 50 minutes, she switches voices and characterizations effortlessly, and offers vivid representations of people who exhibit compassion in a trying time. It gives you hope that people can be like this all the time, not just in the wake of tragedy."</p>
+          <cite>Theater Jones</cite>
+        </div>
+        <p>She performed (or rather took the form of) eight different characters from the community, each taking a turn telling the story from their own point of view, according to <em>The Penning Girl</em>.</p>
+      </div>
+      <div class="show-facts reveal">
+        <dl>
+          <div class="fact"><dt>Running Time</dt><dd>50 minutes</dd></div>
+          <div class="fact"><dt>Format</dt><dd>Solo physical theatre: mime, improv, character work</dd></div>
+          <div class="fact"><dt>Origin</dt><dd>Fertile Ground Festival, Portland OR, 2011</dd></div>
+          <div class="fact"><dt>Toured</dt><dd>2013 – 2015, nationally &amp; internationally</dd></div>
+          <div class="fact"><dt>Directed By</dt><dd>Rusty Tennant</dd></div>
+          <div class="fact"><dt>Produced By</dt><dd>Fuse Theatre Ensemble &amp; Kate's Theatrics</dd></div>
+          <div class="fact"><dt>Later Became</dt><dd><a href="index.html" style="color:var(--brass-bright);">The Play About My Father</a> (2024–present)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="origin">
+  <div class="wrap">
+    <div class="story">
+      <div class="story-art reveal">
+        <img src="images/suburban-tribe-poster-split.jpg" alt="Split-image poster of Kate Mura for Suburban Tribe: Unmasked.">
+      </div>
+      <div class="story-copy reveal">
+        <div class="eyebrow">How the Story Began</div>
+        <h2 style="margin-top:12px; margin-bottom:22px;">Ok fine, they were ripped off by three thugs in Paris.</h2>
+        <p><em>Suburban Tribe</em> began as a short mask show and grew into a full-length piece performed nationally and internationally from 2013 to 2015. Flying home from a successful run at the Avignon OFF Festival, Kate's masks, costume, money, and family heirlooms were stolen at the airport.</p>
+        <p class="big">"It's kind of strange to be doing a show I've spent hundreds of hours on, performed nationally and internationally, unmasked. Until now, it's been a mask show. Now I'm taking the mask off."</p>
+        <p>As resiliency is one of the show's core themes, Kate had to rebuild, continuing, in real time, the story of transforming tragedy into creation. <em>Suburban Tribe: Unmasked</em> revisited the work without masks: "It feels like new water. Like skinny dipping for the first time. The cool exhilaration of having no barriers. Perfect freedom. Then wondering: why did I ever wear a bathing suit? Or in my case, a mask."</p>
+        <p>That instinct to keep peeling the story back kept going. Over the following decade, the mask show became a fully-scripted, multi-character solo play, and found its current name: <strong style="color:var(--bone);">The Play About My Father.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tour">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">On the Road</div>
+      <h2>From a Portland festival stage to Avignon and back.</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-row">
+        <div class="tl-year">2011</div>
+        <div class="tl-body"><h3>Portland, Oregon</h3><p>Premieres as a short mask show at Theater! Theatre!, part of the Fertile Ground Festival.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2013</div>
+        <div class="tl-body"><h3>Dallas, TX · New Orleans, LA · Albuquerque, NM</h3><p>Grows into a full-length national tour: Audacity Theatre Lab (Theater Jones Top 5 Small Tour), Tigermen Den, and The Cell Theatre with Fusion Theatre Company.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2013–14</div>
+        <div class="tl-body"><h3>Los Angeles, CA · Tacoma, WA</h3><p>Salon performances in Los Angeles; First Night in Tacoma, Washington.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2014</div>
+        <div class="tl-body"><h3>Ubud, Bali, Indonesia</h3><p>Melati Cottages and intimate salon performances in Ubud.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2014–15</div>
+        <div class="tl-body"><h3>Adelaide, Australia</h3><p>Adelaide Fringe Festival, through The Garage International, at NACC, Town Hall &amp; Birdwood Exhibition Center.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2015</div>
+        <div class="tl-body"><h3>Avignon, France</h3><p>Avignon OFF Festival, through The Garage International, at Hotel Mercure, where, on the way home, the masks were stolen and <em>Unmasked</em> was born.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year">2024→</div>
+        <div class="tl-body"><h3>The story keeps going</h3><p>A decade later, this piece became <em>The Play About My Father</em>. See the <a href="index.html" style="color:var(--brass-bright);">current EPK</a> for where it's playing now.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="press">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Press</div>
+      <h2>What the reviews said.</h2>
+    </div>
+  </div>
+  <div class="wrap reveal">
+    <div class="eyebrow" style="margin-bottom:16px;">2013-15 Suburban Tribe: Unmasked</div>
+    <div class="press-grid">
+      <div class="press-card">
+        <p>"It was BRILLIANT! Absolutely SMASHING!"</p>
+        <cite>The Penning Girl</cite>
+      </div>
+      <div class="press-card">
+        <p>"In 50 minutes, she switches voices and characterizations effortlessly... it gives you hope that people can be like this all the time."</p>
+        <cite>Theater Jones</cite>
+      </div>
+      <div class="press-card">
+        <p>"She performed (or rather took the form of) eight different characters from the community, each telling the story from their own point of view."</p>
+        <cite>The Penning Girl</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bio">
+  <div class="wrap">
+    <div class="bio">
+      <div class="bio-photo reveal">
+        <img src="images/kate-mura-headshot.jpg" alt="Portrait of Kate Mura, wide-eyed and mid-expression.">
+        <div class="cap">Photo Credit: Gary Norman</div>
+      </div>
+      <div class="bio-copy reveal">
+        <div class="eyebrow">The Artist</div>
+        <p class="lede">Transformation is my passion…</p>
+        <p>Kate Mura is an actor, a union stagehand, designer, and coach. She chooses theatre as her life's work because it constantly proves that creating other worlds <em>is</em> possible, and it's her quest, in life and art, to help build the world she wants to live in: one that's beautiful, supportive, and sustainable through tragedy and pain.</p>
+        <ul class="credit-list">
+          <li>Backup dancer for Salt-N-Pepa at CityKids Foundation's Tenth Anniversary Gala</li>
+          <li>Danced with President Bill Clinton at the Presidential Summit for America's Future</li>
+          <li>Coached William Hurt in neutral mask for <em>No Man's Land</em> at Artists Repertory Theatre</li>
+          <li>Played The Library Lady in <em>Tomás and the Library Lady</em> with Oregon Children's Theatre</li>
+          <li>Toured ten states with Tears of Joy Theatre in <em>The Reluctant Dragon</em>, <em>Pinocchio</em>, and <em>When Animals Were People</em></li>
+          <li>Recipient of the Leslie O. Fulton Fellowship</li>
+        </ul>
+        <p style="margin-top:22px; opacity:0.85;">When she's not in a theatre, she can be found exploring her surroundings, reading tarot cards, and being naked in nature.</p>
+      </div>
+    </div>
+
+    <div class="fuse-block reveal">
+      <img src="images/fuse-theatre-logo.jpg" alt="Fuse Theatre Ensemble logo">
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px;">Producing Company</div>
+        <h3 style="font-size:1.3rem; margin-bottom:10px; color:var(--bone);">Fuse Theatre Ensemble</h3>
+        <p>Fuse has spent over a decade producing paradigm-shifting theatre in Portland, OR, and around the world, a recipient of six 2019 Drammy Awards and grants from the Regional Arts &amp; Culture Council. In under a decade, Fuse fostered thirteen original works and toured the Pacific Northwest's work to New Orleans, Dallas, Albuquerque, San Francisco, Los Angeles, Bali, Adelaide, Bath, and Avignon, while also producing Portland's annual OUTwright Theatre Festival.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="credits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Production Credits</div>
+      <h2>Who made it.</h2>
+    </div>
+    <div class="playbill reveal">
+      <div class="pb-item"><div class="pb-role">Performer / Creator</div><div class="pb-name">Kate Mura</div></div>
+      <div class="pb-item"><div class="pb-role">Director</div><div class="pb-name">Rusty Tennant</div></div>
+      <div class="pb-item"><div class="pb-role">Costume Design</div><div class="pb-name">Jessica Bobillot</div></div>
+      <div class="pb-item"><div class="pb-role">Sound Designer</div><div class="pb-name">Sharath Patel</div></div>
+      <div class="pb-item"><div class="pb-role">Voice Over</div><div class="pb-name">Janet Mura</div></div>
+      <div class="pb-item"><div class="pb-role">Producers</div><div class="pb-name">Fuse Theatre Ensemble &amp; Kate's Theatrics</div></div>
+      <div class="pb-item"><div class="pb-role">Poster Design</div><div class="pb-name">Lee Moyer</div></div>
+      <div class="pb-item"><div class="pb-role">Logo &amp; Graphic Design</div><div class="pb-name">Alec Lugo</div></div>
+      <div class="pb-item"><div class="pb-role">Photography</div><div class="pb-name">Greg Parkinson</div></div>
+      <div class="pb-item"><div class="pb-role">Production Photos</div><div class="pb-name">Gary Norman &amp; Rusty Tennant</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2>From the road.</h2>
+    </div>
+
+    <div class="gallery reveal">
+      <img src="images/suburban-tribe-avignon-2015.jpg" alt="Kate Mura kneeling on stage beside an ornate wooden chair, lit warmly. 2015 performance at the Avignon OFF Festival, Hotel Mercure, through The Garage International.">
+      <div class="gcol">
+        <img src="images/suburban-tribe-poster-masks.jpg" alt="Suburban Tribe poster art featuring Kate Mura surrounded by ornate masks.">
+        <img src="images/suburban-tribe-poster-split.jpg" alt="Suburban Tribe: Unmasked poster, split portrait of Kate Mura.">
+      </div>
+    </div>
+
+    <div class="archive-cta reveal" style="margin-top:56px; background:rgba(239,230,216,0.04); border:1px solid var(--line); padding:40px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+      <div>
+        <h3 style="font-size:1.4rem; color:var(--bone); max-width:26ch;">Looking for the current show?</h3>
+        <p style="color:var(--parchment); opacity:0.85; max-width:38ch; margin:8px 0 0; font-size:0.95rem;">Production photos, press, and booking info for <em>The Play About My Father</em> live on the main EPK.</p>
+      </div>
+      <a class="btn btn-solid" href="index.html">View the EPK →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--brass-bright);">Booking</div>
+    <h2>To book Kate, see the current EPK.</h2>
+    <div class="contact-grid">
+      <div class="contact-links">
+        <a href="index.html">View the EPK →</a>
+        <a href="mailto:bookingfaery@katemura.com">bookingfaery@katemura.com</a>
+      </div>
+      <p class="contact-note">This archive page is for reference. Active booking, availability, and current press live on the main EPK.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Kate Mura · Archive · Suburban Tribe: Unmasked (2011-2015)</footer>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Hero unmask interaction
+  const heroStack = document.getElementById('heroStack');
+  const maskLayer = document.getElementById('heroMaskLayer');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setSpot(xPct, yPct){
+    maskLayer.style.setProperty('--mx', xPct + '%');
+    maskLayer.style.setProperty('--my', yPct + '%');
+  }
+
+  let usingPointer = false;
+  if(heroStack){
+    heroStack.addEventListener('pointermove', (e)=>{
+      usingPointer = true;
+      const r = heroStack.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width) * 100;
+      const y = ((e.clientY - r.top) / r.height) * 100;
+      setSpot(x, y);
+    });
+    heroStack.addEventListener('pointerleave', ()=>{ usingPointer = false; });
+  }
+
+  // Ambient auto-drift when not actively hovered (keeps the piece alive on touch devices)
+  if(!prefersReduced){
+    let t = 0;
+    function drift(){
+      if(!usingPointer){
+        t += 0.006;
+        const x = 50 + Math.sin(t) * 30;
+        const y = 32 + Math.cos(t * 0.8) * 14;
+        setSpot(x, y);
+      }
+      requestAnimationFrame(drift);
+    }
+    requestAnimationFrame(drift);
+  } else {
+    setSpot(50, 32);
+  }
+</script>
+
+</body>
+</html>

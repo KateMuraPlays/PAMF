@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Play About My Father, a solo show written and performed by Kate Mura. Ten years in the making. Booking info, press, and press kit.">
+<meta property="og:title" content="The Play About My Father | Kate Mura">
+<meta property="og:description" content="Singing, mime, dance, and a dozen voices. One performer's love letter to the community who showed up when it mattered most.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/suburban-tribe-avignon-2015.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Kate Mura | EPK | The Play About My Father</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1416;
+    --ink-soft:#161D20;
+    --tide:#1B4A47;
+    --tide-bright:#5CB3A6;
+    --ember:#C4694A;
+    --ember-bright:#E08256;
+    --sand:#E8DFD2;
+    --bone:#F8F2E7;
+    --line: rgba(232,223,210,0.14);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--ink);color:var(--bone);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{animation:none !important;transition:none !important;}}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;font-weight:600;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:0.18em;font-size:0.72rem;color:var(--tide-bright);}
+
+  nav{position:sticky;top:0;z-index:60;background:rgba(15,20,22,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;}
+  .navmark{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;}
+  .navmark span{color:var(--tide-bright);}
+  .navlinks{display:flex;gap:26px;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;}
+  .navlinks a{text-decoration:none;color:var(--sand);opacity:0.72;transition:opacity .2s,color .2s;}
+  .navlinks a:hover,.navlinks a:focus-visible{opacity:1;color:var(--tide-bright);}
+  @media (max-width:820px){.navlinks{display:none;}}
+
+  .hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero-img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;object-position:52% 42%;
+    animation:kb 30s ease-in-out infinite alternate;}
+  @keyframes kb{0%{transform:scale(1.04) translate(0,0);}100%{transform:scale(1.13) translate(-1.5%,-1%);}}
+  .hero-grade{position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(15,20,22,0.55) 0%, rgba(15,20,22,0.15) 30%, rgba(15,20,22,0.80) 78%, rgba(15,20,22,0.98) 100%),
+      linear-gradient(90deg, rgba(15,20,22,0.86) 0%, rgba(15,20,22,0.30) 52%, rgba(15,20,22,0.05) 100%);}
+  .hero-tint{position:absolute;inset:0;background:radial-gradient(ellipse at 62% 46%, rgba(224,130,86,0.16) 0%, transparent 58%);mix-blend-mode:screen;}
+  .hero-content{position:relative;z-index:3;width:100%;padding:0 0 72px;}
+  .hero-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+  .hero-rule{width:38px;height:1px;background:var(--tide-bright);}
+  h1.hero-title{font-size:clamp(3rem,8.4vw,6.8rem);line-height:0.94;letter-spacing:-0.015em;max-width:15ch;
+    text-shadow:0 2px 40px rgba(0,0,0,0.5);}
+  h1.hero-title em{font-style:italic;font-weight:400;color:var(--ember-bright);}
+  .hero-sub{max-width:44ch;font-size:1.1rem;color:var(--sand);margin-top:22px;text-shadow:0 1px 18px rgba(0,0,0,0.6);}
+  .hero-quotes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .hq{border:1px solid var(--line);background:rgba(15,20,22,0.55);backdrop-filter:blur(4px);padding:12px 16px;max-width:330px;}
+  .hq b{display:block;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:0.99rem;color:var(--bone);margin-bottom:4px;}
+  .hq span{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--tide-bright);}
+  .hero-ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;}
+  .btn{display:inline-block;font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid var(--tide-bright);transition:background .2s,color .2s,transform .15s;}
+  .btn:focus-visible{outline:2px solid var(--tide-bright);outline-offset:3px;}
+  .btn-solid{background:var(--tide-bright);color:var(--ink);}
+  .btn-solid:hover{background:#7ccbbe;transform:translateY(-2px);}
+  .btn-outline{color:var(--bone);background:rgba(15,20,22,0.4);}
+  .btn-outline:hover{background:rgba(92,179,166,0.16);transform:translateY(-2px);}
+  .hero-credit{position:absolute;right:20px;bottom:14px;z-index:3;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(232,223,210,0.5);}
+
+  .section{padding:100px 0;border-bottom:1px solid var(--line);}
+  .section-head{max-width:660px;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);margin-top:12px;line-height:1.05;}
+  .alt{background:var(--ink-soft);}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1);}
+  .reveal.on{opacity:1;transform:none;}
+
+  .ensemble-intro{max-width:620px;margin-bottom:38px;}
+  .ensemble-intro p{color:var(--sand);font-size:1.05rem;}
+  .ensemble{display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;}
+  .cast-list{display:flex;flex-wrap:wrap;gap:9px;}
+  .cast-chip{font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.04em;text-transform:uppercase;
+    padding:11px 16px;border:1px solid var(--line);background:transparent;color:var(--sand);cursor:pointer;
+    transition:border-color .2s,color .2s,background .2s,transform .15s;}
+  .cast-chip:hover{border-color:var(--ember);color:var(--bone);transform:translateY(-2px);}
+  .cast-chip.active{background:var(--ember);border-color:var(--ember);color:#14181A;font-weight:700;}
+  .cast-chip:focus-visible{outline:2px solid var(--tide-bright);outline-offset:3px;}
+  .cast-stage{border:1px solid var(--line);background:rgba(232,223,210,0.035);padding:38px 34px;min-height:250px;display:flex;flex-direction:column;justify-content:center;}
+  .cast-name{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--ember-bright);font-style:italic;font-weight:500;margin-bottom:6px;}
+  .cast-role{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--tide-bright);margin-bottom:16px;}
+  .cast-desc{color:var(--sand);font-size:1.02rem;line-height:1.6;margin:0;}
+  .cast-fade{animation:fadein .45s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .cast-count{margin-top:22px;font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(232,223,210,0.45);}
+  @media (max-width:880px){.ensemble{grid-template-columns:1fr;gap:28px;}}
+
+  .show-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:start;}
+  .show-copy p{font-size:1.05rem;color:var(--sand);}
+  .show-copy p.lede{font-size:1.26rem;font-family:'Fraunces',serif;font-weight:500;color:var(--bone);line-height:1.45;}
+  .pullquote{border-left:2px solid var(--ember);padding-left:22px;margin:30px 0;}
+  .pullquote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.16rem;color:var(--bone);font-weight:500;line-height:1.5;margin:0 0 8px;}
+  .pullquote cite{font-style:normal;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);}
+  .facts{border:1px solid var(--line);padding:26px;background:rgba(232,223,210,0.04);position:sticky;top:88px;}
+  .facts .fact{padding:13px 0;border-bottom:1px solid var(--line);}
+  .facts .fact:last-child{border-bottom:none;}
+  .facts dt{font-family:'Space Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--tide-bright);margin-bottom:4px;}
+  .facts dd{margin:0;font-family:'Fraunces',serif;font-size:1.02rem;color:var(--bone);}
+  @media (max-width:880px){.show-grid{grid-template-columns:1fr;gap:34px;} .facts{position:static;}}
+
+  .press-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .press-card{background:var(--ink);padding:36px 30px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s;}
+  .press-card:hover{background:var(--ink-soft);}
+  .press-card p{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--bone);font-weight:500;line-height:1.45;margin:0;}
+  .press-card cite{font-style:normal;margin-top:18px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--tide-bright);}
+  .press-links{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;}
+  .press-links a{font-family:'Space Mono',monospace;font-size:0.71rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--tide-bright);text-decoration:none;border-bottom:1px solid var(--tide-bright);padding-bottom:2px;}
+  .press-links a:hover{color:var(--bone);border-color:var(--bone);}
+  @media (max-width:720px){.press-grid{grid-template-columns:1fr;}}
+
+  .bio{display:grid;grid-template-columns:300px 1fr;gap:56px;}
+  .bio-photo img{width:100%;border:1px solid var(--line);}
+  .bio-photo .cap{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);opacity:0.7;margin-top:10px;}
+  .bio-copy .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--ember-bright);font-weight:500;}
+  .bio-copy p{color:var(--sand);font-size:1.01rem;}
+  .credit-list{list-style:none;margin:22px 0 0;padding:0;}
+  .credit-list li{padding:12px 0;border-top:1px solid var(--line);font-size:0.96rem;color:var(--sand);}
+  .credit-list li:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:880px){.bio{grid-template-columns:1fr;gap:30px;}.bio-photo{max-width:270px;}}
+
+  .playbill{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;border-top:1px solid var(--line);}
+  .pb-item{display:grid;grid-template-columns:1fr 1.25fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);}
+  .pb-role{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);}
+  .pb-name{font-family:'Fraunces',serif;font-size:1.01rem;color:var(--bone);}
+  @media (max-width:720px){.playbill{grid-template-columns:1fr;}}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+  .gallery figure{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);}
+  .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1);}
+  .gallery figure:hover img{transform:scale(1.06);}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--bone);
+    background:linear-gradient(180deg,transparent,rgba(15,20,22,0.92));opacity:0;transition:opacity .3s;}
+  .gallery figure:hover figcaption{opacity:1;}
+  .slot{border:1px dashed rgba(232,223,210,0.22);aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
+  .slot span{font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(232,223,210,0.4);line-height:1.7;}
+  .gallery-note{margin-top:22px;font-size:0.92rem;color:rgba(232,223,210,0.6);max-width:62ch;}
+  @media (max-width:600px){.gallery{grid-template-columns:1fr;}}
+
+  .archive-cta{margin-top:56px;background:rgba(232,223,210,0.04);border:1px solid var(--line);padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+  .archive-cta h3{font-size:1.35rem;color:var(--bone);max-width:26ch;}
+  .archive-cta p{color:var(--sand);opacity:0.82;max-width:40ch;margin:8px 0 0;font-size:0.94rem;}
+
+  .contact{background:var(--tide);padding:92px 0 56px;}
+  .contact h2{font-size:clamp(2.2rem,5vw,3.5rem);max-width:16ch;}
+  .contact-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:36px;margin-top:38px;}
+  .contact-links{display:flex;flex-direction:column;gap:10px;}
+  .contact-links a{font-family:'Fraunces',serif;font-size:1.3rem;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
+  .contact-links a:hover{border-color:var(--bone);}
+  .contact-note{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.05em;color:rgba(248,242,231,0.68);max-width:34ch;}
+  footer{padding:24px 0;text-align:center;font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(248,242,231,0.4);background:var(--tide);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="navmark">KATE MURA <span>· EPK</span></div>
+    <div class="navlinks">
+      <a href="#ensemble">The Ensemble</a>
+      <a href="#show">The Show</a>
+      <a href="#press">Press</a>
+      <a href="#bio">Artist</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Book</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <img class="hero-img" src="images/suburban-tribe-avignon-2015.jpg" alt="Kate Mura kneeling on a dark stage beside an empty wooden chair, lit in warm amber light.">
+  <div class="hero-grade"></div>
+  <div class="hero-tint"></div>
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="hero-eyebrow-row">
+        <div class="hero-rule"></div>
+        <div class="eyebrow">A Solo Show Written &amp; Performed by Kate Mura</div>
+      </div>
+      <h1 class="hero-title">The Play About <em>My Father</em></h1>
+      <p class="hero-sub">Singing, mime, dance, and a dozen voices. Ten years in the making. One performer's love letter to the community who showed up when it mattered most.</p>
+      <div class="hero-quotes">
+        <div class="hq"><b>A preternaturally gifted performer telling an achingly human, uplifting story.</b><span>Willamette Week</span></div>
+        <div class="hq"><b>A warm and compassionate show about the power of kindness.</b><span>BroadwayWorld</span></div>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#contact">Book the Show</a>
+        <a class="btn btn-outline" href="#ensemble">Meet the Ensemble</a>
+        <a class="btn btn-outline" href="press-kit/kate-mura-the-play-about-my-father-epk.pdf" download>Download EPK (PDF)</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-credit">Photo: Rusty Tennant</div>
+</section>
+
+<section class="section alt" id="ensemble">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Ensemble of One</div>
+      <h2>A whole community. One performer.</h2>
+    </div>
+    <div class="ensemble-intro reveal">
+      <p>Mura shape-shifts through an entire New Jersey neighborhood without a costume change or a set piece, moving between voices, accents, and bodies so fluidly that reviewers describe it as effortless. Tap a name to meet them.</p>
+    </div>
+    <div class="ensemble reveal">
+      <div>
+        <div class="cast-list" id="castList" role="tablist" aria-label="Characters in the show"></div>
+        <p class="cast-count" id="castCount"></p>
+      </div>
+      <div class="cast-stage" id="castStage" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="show">
+  <div class="wrap">
+    <div class="show-grid">
+      <div class="show-copy reveal">
+        <div class="eyebrow">The Show</div>
+        <h2 style="margin-top:12px;margin-bottom:24px;">A community of caregivers, played by one woman.</h2>
+        <p class="lede">When Kate Mura was young, her father was badly hurt in a freak accident. The Play About My Father is her love letter to everyone who showed up: family, friends, chosen family, and a whole New Jersey community.</p>
+        <p>Mura narrates as Stella, her jovial, babushka-wearing great-aunt who has seen her share of tragedy but is still delighted by humanity. Talking about the family's mounting medical bills, Stella chortles as she recalls sneaking food from the racetrack buffet to help stretch a strained budget.</p>
+        <div class="pullquote">
+          <p>Mura seamlessly shape-shifts from one persona to another, in a show that is achingly human and uplifting.</p>
+          <cite>Willamette Week</cite>
+        </div>
+        <p>In one of the darkest scenes, Mura is bathed in red light, singing Nirvana's "Come As You Are" while miming taking pills. Elsewhere, moving light suggests shifting clouds and ocean foam, a recurring image tied to the water where her father was hurt, and a reminder that humans cannot control nature. It closes with Mura making eye contact with the audience and inviting everyone to go out and say nice things to each other.</p>
+      </div>
+      <div class="facts reveal">
+        <dl style="margin:0;">
+          <div class="fact"><dt>Running Time</dt><dd>About 60 minutes</dd></div>
+          <div class="fact"><dt>Format</dt><dd>Solo show: singing, mime, dance, improv, multi-character work</dd></div>
+          <div class="fact"><dt>Developed Over</dt><dd>10 years</dd></div>
+          <div class="fact"><dt>Written &amp; Performed By</dt><dd>Kate Mura</dd></div>
+          <div class="fact"><dt>Directed By</dt><dd>Rusty Tennant</dd></div>
+          <div class="fact"><dt>Costume Design</dt><dd>Jessica Kroeze</dd></div>
+          <div class="fact"><dt>Staging Needs</dt><dd>Minimal. One chair, intimate house, flexible lighting</dd></div>
+          <div class="fact"><dt>Most Recently Staged</dt><dd>Fuse Theatre Ensemble, Back Door Theatre, Apr to May 2024; Artists Repertory Theatre, 2025</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="press">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Press</div>
+      <h2>What the reviews said.</h2>
+    </div>
+    <div class="press-grid reveal">
+      <div class="press-card">
+        <p>A preternaturally gifted performer who tells an achingly human and uplifting story.</p>
+        <cite>Willamette Week</cite>
+      </div>
+      <div class="press-card">
+        <p>A warm and compassionate show that demonstrates the power of kindness to lift people up in their moments of greatest need.</p>
+        <cite>BroadwayWorld</cite>
+      </div>
+      <div class="press-card">
+        <p>Mura is an open-hearted performer who invites the audience in. I felt like I was getting to know real people.</p>
+        <cite>BroadwayWorld</cite>
+      </div>
+      <div class="press-card">
+        <p>A dress that rivals Cinderella's for magical properties. It looks like a plain gray frock, then reveals itself as a feat of sewing engineering.</p>
+        <cite>BroadwayWorld, on the costume design</cite>
+      </div>
+    </div>
+    <div class="press-links reveal">
+      <a href="https://www.wweek.com/arts/theater/2024/04/23/one-woman-portrays-a-community-of-caregivers-in-fuse-theatre-ensembles-the-play-about-my-father/" target="_blank" rel="noopener">Read full review: Willamette Week</a>
+      <a href="https://www.broadwayworld.com/portland/article/Review-THE-PLAY-ABOUT-MY-FATHER-at-Fuse-Theatre-Ensemble-20240422" target="_blank" rel="noopener">Read full review: BroadwayWorld</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bio">
+  <div class="wrap">
+    <div class="bio">
+      <div class="bio-photo reveal">
+        <img src="images/kate-mura-headshot.jpg" alt="Portrait of Kate Mura, wide-eyed and mid-expression.">
+        <div class="cap">Photo: Gary Norman</div>
+      </div>
+      <div class="bio-copy reveal">
+        <div class="eyebrow">The Artist</div>
+        <p class="lede">Transformation is my passion…</p>
+        <p>Kate Mura is an actor, a union stagehand, designer, and coach. She chooses theatre as her life's work because it constantly proves that creating other worlds <em>is</em> possible, and it's her quest, in life and art, to help build the world she wants to live in: one that's beautiful, supportive, and sustainable through tragedy and pain.</p>
+        <ul class="credit-list">
+          <li>Backup dancer for Salt-N-Pepa at CityKids Foundation's Tenth Anniversary Gala</li>
+          <li>Danced with President Bill Clinton at the Presidential Summit for America's Future</li>
+          <li>Coached William Hurt in neutral mask for <em>No Man's Land</em> at Artists Repertory Theatre</li>
+          <li>Played The Library Lady in <em>Tomás and the Library Lady</em> with Oregon Children's Theatre</li>
+          <li>Toured ten states with Tears of Joy Theatre in <em>The Reluctant Dragon</em>, <em>Pinocchio</em>, and <em>When Animals Were People</em></li>
+          <li>Recipient of the Leslie O. Fulton Fellowship</li>
+        </ul>
+        <p style="margin-top:22px;opacity:0.85;">When she's not in a theatre, she can be found exploring her surroundings, reading tarot cards, and being naked in nature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="credits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Production Credits</div>
+      <h2>Who's making it.</h2>
+    </div>
+    <div class="playbill reveal">
+      <div class="pb-item"><div class="pb-role">Performer / Creator</div><div class="pb-name">Kate Mura</div></div>
+      <div class="pb-item"><div class="pb-role">Director</div><div class="pb-name">Rusty Tennant</div></div>
+      <div class="pb-item"><div class="pb-role">Costume Design</div><div class="pb-name">Jessica Kroeze</div></div>
+      <div class="pb-item"><div class="pb-role">Producer</div><div class="pb-name">Fuse Theatre Ensemble</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2>On stage.</h2>
+    </div>
+    <!-- GALLERY: production photos from the 2024 Fuse Theatre Ensemble run -->
+    <div class="gallery reveal">
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-01.jpg" alt="Kate Mura crouched on stage in character, warmly lit.">
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-02.jpg" alt="Kate Mura in character, caught mid-expression in warm side light.">
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-03.jpg" alt="Kate Mura gesturing in character, lit in cool blue stage light.">
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-04.jpg" alt="Kate Mura in character, mid-gesture with an outstretched arm.">
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-05.jpg" alt="Kate Mura in character, wide-eyed in red stage light.">
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-06.jpg" alt="Kate Mura laughing mid-performance, in profile.">
+      </figure>
+    </div>
+
+    <div class="archive-cta reveal">
+      <div>
+        <h3>Curious how this show came to be?</h3>
+        <p>Suburban Tribe: Unmasked, the earlier mask-show version of this story, its full touring history, and vintage press, all live in the archive.</p>
+      </div>
+      <a class="btn btn-outline" href="archive.html">View the Archive</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--bone);opacity:0.8;">Booking</div>
+    <h2>Bring The Play About My Father to your stage.</h2>
+    <div class="contact-grid">
+      <div class="contact-links">
+        <a href="mailto:bookingfaery@katemura.com">bookingfaery@katemura.com</a>
+        <a href="tel:5032986972">503-298-6972</a>
+        <a href="http://www.katemura.com" target="_blank" rel="noopener">katemura.com</a>
+        <a href="press-kit/kate-mura-the-play-about-my-father-epk.pdf" download>Download the press kit (PDF)</a>
+      </div>
+      <p class="contact-note">Currently booking for 2027.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Kate Mura · The Play About My Father · EPK</footer>
+
+<script>
+  const io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  var CAST = [
+    {name:"Stella", role:"Great-aunt, narrator",
+     desc:"Jovial and babushka-wearing, Stella carries the story. She has seen her share of tragedy but stays delighted by humanity, and chortles remembering how she snuck food from the racetrack buffet to help stretch the family's budget."},
+    {name:"Tony", role:"Family friend",
+     desc:"Keeper of the famous lasagna. In the show's opening vision of the afterlife, the line to the Pearly Gates never moves, and that is fine, because the people you love are there and occasionally Tony cooks."},
+    {name:"Jim", role:"Her father",
+     desc:"Hurt in a freak accident in the ocean. Mura portrays him as moving light behind her suggests shifting clouds and the foam of the water, an image the show returns to again and again."},
+    {name:"The Aunts", role:"Family",
+     desc:"Part of the biological and chosen family who closed ranks around the Muras. Mura moves between them by voice and body alone, with no costume change to lean on."},
+    {name:"The Neighbors", role:"Community",
+     desc:"The New Jersey neighborhood that showed up. They are the reason the show exists: it is built as a thank-you to the people who quietly carried a family through the worst of it."},
+    {name:"The Priest", role:"Community",
+     desc:"One more voice in a town's worth of them, drawn with the same generosity the show extends to everyone in it."},
+    {name:"Kate", role:"Herself, briefly",
+     desc:"She appears as herself only for a moment. The choice keeps the piece from becoming a monologue about her, and keeps it about the people who showed up."}
+  ];
+
+  var list = document.getElementById('castList');
+  var stage = document.getElementById('castStage');
+  var count = document.getElementById('castCount');
+  count.textContent = CAST.length + " of the voices in a 60 minute show";
+
+  function render(i){
+    var c = CAST[i];
+    stage.innerHTML =
+      '<div class="cast-fade">' +
+      '<div class="cast-name">' + c.name + '</div>' +
+      '<div class="cast-role">' + c.role + '</div>' +
+      '<p class="cast-desc">' + c.desc + '</p>' +
+      '</div>';
+    Array.prototype.forEach.call(list.children, function(b, bi){
+      if(bi === i){ b.classList.add('active'); b.setAttribute('aria-selected','true'); }
+      else { b.classList.remove('active'); b.setAttribute('aria-selected','false'); }
+    });
+  }
+
+  CAST.forEach(function(c, i){
+    var b = document.createElement('button');
+    b.className = 'cast-chip';
+    b.type = 'button';
+    b.setAttribute('role','tab');
+    b.textContent = c.name;
+    b.addEventListener('click', function(){ render(i); paused = true; });
+    list.appendChild(b);
+  });
+
+  var idx = 0, paused = false;
+  render(0);
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    setInterval(function(){
+      if(paused) return;
+      idx = (idx + 1) % CAST.length;
+      render(idx);
+    }, 4200);
+  }
+</script>
+
+</body>
+</html>
