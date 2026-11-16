@@ -7,7 +7,7 @@
 <meta property="og:title" content="The Play About My Father | Kate Mura">
 <meta property="og:description" content="Singing, mime, dance, and a dozen voices. One performer's love letter to the community who showed up when it mattered most.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/suburban-tribe-avignon-2015.jpg">
+<meta property="og:image" content="https://katemuraplays.github.io/PAMF/images/pamf-share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <title>Kate Mura | EPK | The Play About My Father</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,15 +15,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0F1416;
-    --ink-soft:#161D20;
-    --tide:#1B4A47;
-    --tide-bright:#5CB3A6;
-    --ember:#C4694A;
-    --ember-bright:#E08256;
-    --sand:#E8DFD2;
-    --bone:#F8F2E7;
-    --line: rgba(232,223,210,0.14);
+    /* sunrise palette: silhouette black, ember, amber, rose, lavender */
+    --ink:#140B0C;
+    --ink-soft:#1E1113;
+    --dusk:#5E2C28;
+    --glow:#F4B266;
+    --rose:#F2A3A0;
+    --lilac:#BFA6D6;
+    --ember:#D9694F;
+    --ember-bright:#F4957C;
+    --sand:#EAD9CC;
+    --bone:#FBF1E8;
+    --line: rgba(234,217,204,0.14);
+    --sunrise: linear-gradient(90deg,#F7C66B 0%,#F4957C 48%,#E98FA8 100%);
     --maxw:1180px;
   }
   *{box-sizing:border-box;}
@@ -34,45 +38,47 @@
   a{color:inherit;}
   h1,h2,h3{font-family:'Fraunces',serif;margin:0;font-weight:600;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
-  .eyebrow{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:0.18em;font-size:0.72rem;color:var(--tide-bright);}
+  .eyebrow{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:0.18em;font-size:0.72rem;color:var(--glow);}
 
-  nav{position:sticky;top:0;z-index:60;background:rgba(15,20,22,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav{position:sticky;top:0;z-index:60;background:rgba(20,11,12,0.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;}
   .navmark{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;}
-  .navmark span{color:var(--tide-bright);}
+  .navmark span{color:var(--glow);}
   .navlinks{display:flex;gap:26px;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;}
   .navlinks a{text-decoration:none;color:var(--sand);opacity:0.72;transition:opacity .2s,color .2s;}
-  .navlinks a:hover,.navlinks a:focus-visible{opacity:1;color:var(--tide-bright);}
+  .navlinks a:hover,.navlinks a:focus-visible{opacity:1;color:var(--glow);}
   @media (max-width:820px){.navlinks{display:none;}}
 
   .hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden;}
-  .hero-img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;object-position:52% 42%;
+  .hero-img{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;object-position:100% 50%;max-width:none;
     animation:kb 30s ease-in-out infinite alternate;}
+  @media (max-width:760px){.hero-img{object-position:74% 50%;}}
   @keyframes kb{0%{transform:scale(1.04) translate(0,0);}100%{transform:scale(1.13) translate(-1.5%,-1%);}}
   .hero-grade{position:absolute;inset:0;
     background:
-      linear-gradient(180deg, rgba(15,20,22,0.55) 0%, rgba(15,20,22,0.15) 30%, rgba(15,20,22,0.80) 78%, rgba(15,20,22,0.98) 100%),
-      linear-gradient(90deg, rgba(15,20,22,0.86) 0%, rgba(15,20,22,0.30) 52%, rgba(15,20,22,0.05) 100%);}
-  .hero-tint{position:absolute;inset:0;background:radial-gradient(ellipse at 62% 46%, rgba(224,130,86,0.16) 0%, transparent 58%);mix-blend-mode:screen;}
+      linear-gradient(180deg, rgba(20,11,12,0.55) 0%, rgba(20,11,12,0.15) 30%, rgba(20,11,12,0.80) 78%, rgba(20,11,12,0.98) 100%),
+      linear-gradient(90deg, rgba(20,11,12,0.86) 0%, rgba(20,11,12,0.30) 52%, rgba(20,11,12,0.05) 100%);}
+  .hero-tint{position:absolute;inset:0;background:radial-gradient(ellipse at 62% 46%, rgba(240,128,112,0.22) 0%, transparent 58%);mix-blend-mode:screen;}
   .hero-content{position:relative;z-index:3;width:100%;padding:0 0 72px;}
   .hero-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
-  .hero-rule{width:38px;height:1px;background:var(--tide-bright);}
+  .hero-rule{width:38px;height:1px;background:var(--glow);}
   h1.hero-title{font-size:clamp(3rem,8.4vw,6.8rem);line-height:0.94;letter-spacing:-0.015em;max-width:15ch;
     text-shadow:0 2px 40px rgba(0,0,0,0.5);}
-  h1.hero-title em{font-style:italic;font-weight:400;color:var(--ember-bright);}
+  h1.hero-title em{font-style:italic;font-weight:400;color:var(--ember-bright);
+    background:var(--sunrise);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-right:0.06em;}
   .hero-sub{max-width:44ch;font-size:1.1rem;color:var(--sand);margin-top:22px;text-shadow:0 1px 18px rgba(0,0,0,0.6);}
   .hero-quotes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
-  .hq{border:1px solid var(--line);background:rgba(15,20,22,0.55);backdrop-filter:blur(4px);padding:12px 16px;max-width:330px;}
+  .hq{border:1px solid var(--line);background:rgba(20,11,12,0.55);backdrop-filter:blur(4px);padding:12px 16px;max-width:330px;}
   .hq b{display:block;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:0.99rem;color:var(--bone);margin-bottom:4px;}
-  .hq span{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--tide-bright);}
+  .hq span{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--glow);}
   .hero-ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;}
-  .btn{display:inline-block;font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid var(--tide-bright);transition:background .2s,color .2s,transform .15s;}
-  .btn:focus-visible{outline:2px solid var(--tide-bright);outline-offset:3px;}
-  .btn-solid{background:var(--tide-bright);color:var(--ink);}
-  .btn-solid:hover{background:#7ccbbe;transform:translateY(-2px);}
-  .btn-outline{color:var(--bone);background:rgba(15,20,22,0.4);}
-  .btn-outline:hover{background:rgba(92,179,166,0.16);transform:translateY(-2px);}
-  .hero-credit{position:absolute;right:20px;bottom:14px;z-index:3;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(232,223,210,0.5);}
+  .btn{display:inline-block;font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 24px;text-decoration:none;border:1px solid var(--glow);transition:background .2s,color .2s,transform .15s;}
+  .btn:focus-visible{outline:2px solid var(--glow);outline-offset:3px;}
+  .btn-solid{background:var(--glow);color:var(--ink);}
+  .btn-solid:hover{background:#F8C887;transform:translateY(-2px);}
+  .btn-outline{color:var(--bone);background:rgba(20,11,12,0.4);}
+  .btn-outline:hover{background:rgba(244,178,102,0.16);transform:translateY(-2px);}
+  .hero-credit{position:absolute;right:20px;bottom:14px;z-index:3;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(234,217,204,0.5);}
 
   .section{padding:100px 0;border-bottom:1px solid var(--line);}
   .section-head{max-width:660px;margin-bottom:44px;}
@@ -90,14 +96,14 @@
     transition:border-color .2s,color .2s,background .2s,transform .15s;}
   .cast-chip:hover{border-color:var(--ember);color:var(--bone);transform:translateY(-2px);}
   .cast-chip.active{background:var(--ember);border-color:var(--ember);color:#14181A;font-weight:700;}
-  .cast-chip:focus-visible{outline:2px solid var(--tide-bright);outline-offset:3px;}
-  .cast-stage{border:1px solid var(--line);background:rgba(232,223,210,0.035);padding:38px 34px;min-height:250px;display:flex;flex-direction:column;justify-content:center;}
+  .cast-chip:focus-visible{outline:2px solid var(--glow);outline-offset:3px;}
+  .cast-stage{border:1px solid var(--line);background:rgba(234,217,204,0.035);padding:38px 34px;min-height:250px;display:flex;flex-direction:column;justify-content:center;}
   .cast-name{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--ember-bright);font-style:italic;font-weight:500;margin-bottom:6px;}
-  .cast-role{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--tide-bright);margin-bottom:16px;}
+  .cast-role{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--lilac);margin-bottom:16px;}
   .cast-desc{color:var(--sand);font-size:1.02rem;line-height:1.6;margin:0;}
   .cast-fade{animation:fadein .45s ease;}
   @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
-  .cast-count{margin-top:22px;font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(232,223,210,0.45);}
+  .cast-count{margin-top:22px;font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(234,217,204,0.45);}
   @media (max-width:880px){.ensemble{grid-template-columns:1fr;gap:28px;}}
 
   .show-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:start;}
@@ -105,11 +111,11 @@
   .show-copy p.lede{font-size:1.26rem;font-family:'Fraunces',serif;font-weight:500;color:var(--bone);line-height:1.45;}
   .pullquote{border-left:2px solid var(--ember);padding-left:22px;margin:30px 0;}
   .pullquote p{font-family:'Fraunces',serif;font-style:italic;font-size:1.16rem;color:var(--bone);font-weight:500;line-height:1.5;margin:0 0 8px;}
-  .pullquote cite{font-style:normal;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);}
-  .facts{border:1px solid var(--line);padding:26px;background:rgba(232,223,210,0.04);position:sticky;top:88px;}
+  .pullquote cite{font-style:normal;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--glow);}
+  .facts{border:1px solid var(--line);padding:26px;background:rgba(234,217,204,0.04);position:sticky;top:88px;}
   .facts .fact{padding:13px 0;border-bottom:1px solid var(--line);}
   .facts .fact:last-child{border-bottom:none;}
-  .facts dt{font-family:'Space Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--tide-bright);margin-bottom:4px;}
+  .facts dt{font-family:'Space Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--glow);margin-bottom:4px;}
   .facts dd{margin:0;font-family:'Fraunces',serif;font-size:1.02rem;color:var(--bone);}
   @media (max-width:880px){.show-grid{grid-template-columns:1fr;gap:34px;} .facts{position:static;}}
 
@@ -117,15 +123,15 @@
   .press-card{background:var(--ink);padding:36px 30px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s;}
   .press-card:hover{background:var(--ink-soft);}
   .press-card p{font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem;color:var(--bone);font-weight:500;line-height:1.45;margin:0;}
-  .press-card cite{font-style:normal;margin-top:18px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--tide-bright);}
+  .press-card cite{font-style:normal;margin-top:18px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--glow);}
   .press-links{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;}
-  .press-links a{font-family:'Space Mono',monospace;font-size:0.71rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--tide-bright);text-decoration:none;border-bottom:1px solid var(--tide-bright);padding-bottom:2px;}
+  .press-links a{font-family:'Space Mono',monospace;font-size:0.71rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--glow);text-decoration:none;border-bottom:1px solid var(--glow);padding-bottom:2px;}
   .press-links a:hover{color:var(--bone);border-color:var(--bone);}
   @media (max-width:720px){.press-grid{grid-template-columns:1fr;}}
 
   .bio{display:grid;grid-template-columns:300px 1fr;gap:56px;}
   .bio-photo img{width:100%;border:1px solid var(--line);}
-  .bio-photo .cap{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);opacity:0.7;margin-top:10px;}
+  .bio-photo .cap{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--glow);opacity:0.7;margin-top:10px;}
   .bio-copy .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--ember-bright);font-weight:500;}
   .bio-copy p{color:var(--sand);font-size:1.01rem;}
   .credit-list{list-style:none;margin:22px 0 0;padding:0;}
@@ -135,34 +141,36 @@
 
   .playbill{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;border-top:1px solid var(--line);}
   .pb-item{display:grid;grid-template-columns:1fr 1.25fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);}
-  .pb-role{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--tide-bright);}
+  .pb-role{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--glow);}
   .pb-name{font-family:'Fraunces',serif;font-size:1.01rem;color:var(--bone);}
   @media (max-width:720px){.playbill{grid-template-columns:1fr;}}
 
   .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
   .gallery figure{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);}
-  .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1);}
+  .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 28%;transition:transform .7s cubic-bezier(.2,.7,.3,1);}
   .gallery figure:hover img{transform:scale(1.06);}
   .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--bone);
-    background:linear-gradient(180deg,transparent,rgba(15,20,22,0.92));opacity:0;transition:opacity .3s;}
+    background:linear-gradient(180deg,transparent,rgba(20,11,12,0.92));opacity:0;transition:opacity .3s;}
   .gallery figure:hover figcaption{opacity:1;}
-  .slot{border:1px dashed rgba(232,223,210,0.22);aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
-  .slot span{font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(232,223,210,0.4);line-height:1.7;}
-  .gallery-note{margin-top:22px;font-size:0.92rem;color:rgba(232,223,210,0.6);max-width:62ch;}
+  .slot{border:1px dashed rgba(234,217,204,0.22);aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;}
+  .slot span{font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(234,217,204,0.4);line-height:1.7;}
+  .gallery-note{margin-top:22px;font-size:0.92rem;color:rgba(234,217,204,0.6);max-width:62ch;}
   @media (max-width:600px){.gallery{grid-template-columns:1fr;}}
 
-  .archive-cta{margin-top:56px;background:rgba(232,223,210,0.04);border:1px solid var(--line);padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+  .archive-cta{margin-top:56px;background:rgba(234,217,204,0.04);border:1px solid var(--line);padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
   .archive-cta h3{font-size:1.35rem;color:var(--bone);max-width:26ch;}
   .archive-cta p{color:var(--sand);opacity:0.82;max-width:40ch;margin:8px 0 0;font-size:0.94rem;}
 
-  .contact{background:var(--tide);padding:92px 0 56px;}
+  .contact{background:linear-gradient(165deg,#2A1426 0%,#5E2C28 48%,#9E4630 100%);padding:92px 0 56px;}
   .contact h2{font-size:clamp(2.2rem,5vw,3.5rem);max-width:16ch;}
   .contact-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:36px;margin-top:38px;}
   .contact-links{display:flex;flex-direction:column;gap:10px;}
   .contact-links a{font-family:'Fraunces',serif;font-size:1.3rem;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
   .contact-links a:hover{border-color:var(--bone);}
   .contact-note{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.05em;color:rgba(248,242,231,0.68);max-width:34ch;}
-  footer{padding:24px 0;text-align:center;font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(248,242,231,0.4);background:var(--tide);}
+  footer{padding:24px 0;text-align:center;font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(251,241,232,0.55);background:#9E4630;}
+  .gallery-actions{margin-top:22px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .gallery-actions .gallery-note{margin-top:0;}
 </style>
 </head>
 <body>
@@ -182,7 +190,7 @@
 </nav>
 
 <section class="hero" id="top">
-  <img class="hero-img" src="images/suburban-tribe-avignon-2015.jpg" alt="Kate Mura kneeling on a dark stage beside an empty wooden chair, lit in warm amber light.">
+  <img class="hero-img" src="images/pamf-hero-2024.jpg" alt="Kate Mura kneeling on a dark stage beside an empty wooden chair, lit in warm amber light. Photo: Greg Parkinson.">
   <div class="hero-grade"></div>
   <div class="hero-tint"></div>
   <div class="hero-content">
@@ -204,7 +212,7 @@
       </div>
     </div>
   </div>
-  <div class="hero-credit">Photo: Rusty Tennant</div>
+  <div class="hero-credit">Photo: Greg Parkinson</div>
 </section>
 
 <section class="section alt" id="ensemble">
@@ -246,7 +254,7 @@
           <div class="fact"><dt>Format</dt><dd>Solo show: singing, mime, dance, improv, multi-character work</dd></div>
           <div class="fact"><dt>Developed Over</dt><dd>10 years</dd></div>
           <div class="fact"><dt>Written &amp; Performed By</dt><dd>Kate Mura</dd></div>
-          <div class="fact"><dt>Directed By</dt><dd>Rusty Tennant</dd></div>
+          <div class="fact"><dt>Director &amp; Mise en Scène Designer</dt><dd>Rusty Tennant</dd></div>
           <div class="fact"><dt>Costume Design</dt><dd>Jessica Kroeze</dd></div>
           <div class="fact"><dt>Staging Needs</dt><dd>Minimal. One chair, intimate house, flexible lighting</dd></div>
           <div class="fact"><dt>Most Recently Staged</dt><dd>Fuse Theatre Ensemble, Back Door Theatre, Apr to May 2024; Artists Repertory Theatre, 2025</dd></div>
@@ -297,7 +305,7 @@
       <div class="bio-copy reveal">
         <div class="eyebrow">The Artist</div>
         <p class="lede">Transformation is my passion…</p>
-        <p>Kate Mura is an actor, a union stagehand, designer, and coach. She chooses theatre as her life's work because it constantly proves that creating other worlds <em>is</em> possible, and it's her quest, in life and art, to help build the world she wants to live in: one that's beautiful, supportive, and sustainable through tragedy and pain.</p>
+        <p>Kate Mura is a true theatre multi-hyphenate working towards a 2027 designation in Linklater Voice. She chooses theatre as her life's work because it constantly proves that creating other worlds <em>is</em> possible, and it's her quest, in life and art, to help build the world she wants to live in: one that's beautiful. Equitable &amp; ethical. Sustainable. Timely.</p>
         <ul class="credit-list">
           <li>Backup dancer for Salt-N-Pepa at CityKids Foundation's Tenth Anniversary Gala</li>
           <li>Danced with President Bill Clinton at the Presidential Summit for America's Future</li>
@@ -320,9 +328,10 @@
     </div>
     <div class="playbill reveal">
       <div class="pb-item"><div class="pb-role">Performer / Creator</div><div class="pb-name">Kate Mura</div></div>
-      <div class="pb-item"><div class="pb-role">Director</div><div class="pb-name">Rusty Tennant</div></div>
+      <div class="pb-item"><div class="pb-role">Director / Mise en Scène Designer</div><div class="pb-name">Rusty Tennant</div></div>
       <div class="pb-item"><div class="pb-role">Costume Design</div><div class="pb-name">Jessica Kroeze</div></div>
-      <div class="pb-item"><div class="pb-role">Producer</div><div class="pb-name">Fuse Theatre Ensemble</div></div>
+      <div class="pb-item"><div class="pb-role">Producers</div><div class="pb-name">Fuse Theatre Ensemble &amp; Kate's Theatrics LLC</div></div>
+      <div class="pb-item"><div class="pb-role">Production Photography</div><div class="pb-name">Greg Parkinson</div></div>
     </div>
   </div>
 </section>
@@ -333,26 +342,60 @@
       <div class="eyebrow">Gallery</div>
       <h2>On stage.</h2>
     </div>
-    <!-- GALLERY: production photos from the 2024 Fuse Theatre Ensemble run -->
+    <!-- GALLERY: production photos from the 2024 Fuse Theatre Ensemble run. All photos by Greg Parkinson. -->
     <div class="gallery reveal">
       <figure>
-        <img src="images/pamf-2024/pamf-2024-01.jpg" alt="Kate Mura crouched on stage in character, warmly lit.">
+        <img src="images/pamf-2024/pamf-2024-01.jpg" alt="Kate Mura mid-dance, one arm raised toward a floating cloud, in violet light. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
       <figure>
-        <img src="images/pamf-2024/pamf-2024-02.jpg" alt="Kate Mura in character, caught mid-expression in warm side light.">
+        <img src="images/pamf-2024/pamf-2024-02.jpg" alt="Kate Mura as Stella in her babushka, laughing with her hands clasped. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
       <figure>
-        <img src="images/pamf-2024/pamf-2024-03.jpg" alt="Kate Mura gesturing in character, lit in cool blue stage light.">
+        <img src="images/pamf-2024/pamf-2024-03.jpg" alt="Kate Mura in overalls, washed in blue light beneath a cloud, mid-gesture. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
       <figure>
-        <img src="images/pamf-2024/pamf-2024-04.jpg" alt="Kate Mura in character, mid-gesture with an outstretched arm.">
+        <img src="images/pamf-2024/pamf-2024-04.jpg" alt="Kate Mura in red light, looking down into her cupped hands. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
       <figure>
-        <img src="images/pamf-2024/pamf-2024-05.jpg" alt="Kate Mura in character, wide-eyed in red stage light.">
+        <img src="images/pamf-2024/pamf-2024-05.jpg" alt="Kate Mura in green light, hair loose, hands folded in her lap. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
       <figure>
-        <img src="images/pamf-2024/pamf-2024-06.jpg" alt="Kate Mura laughing mid-performance, in profile.">
+        <img src="images/pamf-2024/pamf-2024-06.jpg" alt="Kate Mura sprawled across a red sofa, arms flung overhead. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
       </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-07.jpg" alt="A figure wrapped in a shawl watches a chair draped in white on a sea of blue silk. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-08.jpg" alt="Kate Mura seated on a rope swing above a pool of white fabric. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-09.jpg" alt="Kate Mura in red light, wide-eyed, one hand raised. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-10.jpg" alt="Kate Mura in a long coat, one arm outstretched. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-11.jpg" alt="Kate Mura as Stella, arms thrown up in joy. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+      <figure>
+        <img src="images/pamf-2024/pamf-2024-12.jpg" alt="Kate Mura crouched low on a dark stage beside rippling white fabric, in blue light. Photo: Greg Parkinson." loading="lazy">
+        <figcaption>Photo: Greg Parkinson</figcaption>
+      </figure>
+    </div>
+    <div class="gallery-actions reveal">
+      <a class="btn btn-outline" href="press-kit/kate-mura-pamf-production-photos.zip" download>Download Production Photos (ZIP)</a>
+      <p class="gallery-note">All production photos by Greg Parkinson. Fuse Theatre Ensemble, 2024. High-res files for press and presenters.</p>
     </div>
 
     <div class="archive-cta reveal">
@@ -375,6 +418,7 @@
         <a href="tel:5032986972">503-298-6972</a>
         <a href="http://www.katemura.com" target="_blank" rel="noopener">katemura.com</a>
         <a href="press-kit/kate-mura-the-play-about-my-father-epk.pdf" download>Download the press kit (PDF)</a>
+        <a href="press-kit/kate-mura-pamf-production-photos.zip" download>Download production photos (ZIP)</a>
       </div>
       <p class="contact-note">Currently booking for 2027.</p>
     </div>

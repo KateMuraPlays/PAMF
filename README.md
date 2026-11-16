@@ -4,10 +4,10 @@ Static site. No build step, no dependencies. Just HTML, CSS, and images.
 
 ```
 index.html                 EPK: The Play About My Father (the booking page)
-archive.html               Archive: Suburban Tribe: Unmasked (2011-2015)
+archive.html               Archive: Suburban Tribe: Unmasked (2011-2023)
 images/                    Photos and artwork
   pamf-2024/               <- drop new production photos here
-press-kit/                 Downloadable PDF one-sheet
+press-kit/                 Downloadable PDF one-sheet + production photos ZIP
 .nojekyll                  Tells GitHub Pages to serve files as-is
 ```
 
@@ -72,12 +72,11 @@ links don't break.
 
 ## Before this goes live: check these
 
-- [ ] Booking email and phone number are current (both were carried over from
-      a 2020 press kit and have not been verified)
+- [x] Booking email and phone number are current
 - [ ] `katemura.com` still resolves
 - [ ] Kate has approved the bio and press quotes
-- [ ] Photo credits are correct on every image
-- [ ] Real production photos have replaced the gallery placeholder
+- [x] Photo credits are correct on every image (production photos: Greg Parkinson)
+- [x] Real production photos have replaced the gallery placeholder
 
 ---
 
