@@ -62,9 +62,9 @@
   .hero-content{position:relative;z-index:3;width:100%;padding:0 0 72px;}
   .hero-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
   .hero-rule{width:38px;height:1px;background:var(--glow);}
-  h1.hero-title{font-size:clamp(3rem,8.4vw,6.8rem);line-height:0.94;letter-spacing:-0.015em;max-width:15ch;
+  h1.hero-title{font-size:clamp(2.8rem,6.6vw,6rem);line-height:0.96;letter-spacing:-0.015em;
     text-shadow:0 2px 40px rgba(0,0,0,0.5);}
-  h1.hero-title em{font-style:italic;font-weight:400;color:var(--ember-bright);
+  h1.hero-title em{display:block;font-style:italic;font-weight:400;color:var(--ember-bright);
     background:var(--sunrise);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-right:0.06em;}
   .hero-sub{max-width:44ch;font-size:1.1rem;color:var(--sand);margin-top:22px;text-shadow:0 1px 18px rgba(0,0,0,0.6);}
   .hero-quotes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
@@ -97,7 +97,12 @@
   .cast-chip:hover{border-color:var(--ember);color:var(--bone);transform:translateY(-2px);}
   .cast-chip.active{background:var(--ember);border-color:var(--ember);color:#14181A;font-weight:700;}
   .cast-chip:focus-visible{outline:2px solid var(--glow);outline-offset:3px;}
-  .cast-stage{border:1px solid var(--line);background:rgba(234,217,204,0.035);padding:38px 34px;min-height:250px;display:flex;flex-direction:column;justify-content:center;}
+  .cast-stage{border:1px solid var(--line);background:rgba(234,217,204,0.035);padding:30px;min-height:330px;display:flex;flex-direction:column;justify-content:center;}
+  .cast-card{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;}
+  .cast-card.has-photo{grid-template-columns:minmax(150px,0.8fr) 1.2fr;}
+  .cast-photo{width:100%;aspect-ratio:6/7;object-fit:cover;border:1px solid var(--line);}
+  .cast-photo-cap{font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(234,217,204,0.45);margin-top:6px;}
+  @media (max-width:520px){.cast-card.has-photo{grid-template-columns:1fr;}}
   .cast-name{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--ember-bright);font-style:italic;font-weight:500;margin-bottom:6px;}
   .cast-role{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--lilac);margin-bottom:16px;}
   .cast-desc{color:var(--sand);font-size:1.02rem;line-height:1.6;margin:0;}
@@ -127,6 +132,19 @@
   .press-links{margin-top:22px;display:flex;gap:26px;flex-wrap:wrap;}
   .press-links a{font-family:'Space Mono',monospace;font-size:0.71rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--glow);text-decoration:none;border-bottom:1px solid var(--glow);padding-bottom:2px;}
   .press-links a:hover{color:var(--bone);border-color:var(--bone);}
+  .audience{overflow:hidden;}
+  .aq-viewport{position:relative;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);}
+  .aq-viewport:focus-visible{outline:2px solid var(--glow);outline-offset:4px;}
+  .aq-track{display:flex;gap:18px;width:max-content;padding:4px 0 8px;animation:aq-scroll 110s linear infinite;}
+  .aq-viewport:hover .aq-track,.aq-viewport:focus-within .aq-track{animation-play-state:paused;}
+  @keyframes aq-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .aq{margin:0;width:340px;flex:0 0 auto;border:1px solid var(--line);background:rgba(234,217,204,0.035);padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;}
+  .aq blockquote{margin:0;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.05rem;line-height:1.5;color:var(--bone);}
+  .aq figcaption{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);}
+  .aq figcaption::before{content:"";}
+  @media (prefers-reduced-motion:reduce){.aq-track{animation:none !important;} .aq-viewport{overflow-x:auto;-webkit-mask-image:none;mask-image:none;padding:0 28px;}}
   @media (max-width:720px){.press-grid{grid-template-columns:1fr;}}
 
   .bio{display:grid;grid-template-columns:300px 1fr;gap:56px;}
@@ -199,7 +217,7 @@
         <div class="hero-rule"></div>
         <div class="eyebrow">A Solo Show Written &amp; Performed by Kate Mura</div>
       </div>
-      <h1 class="hero-title">The Play About <em>My Father</em></h1>
+      <h1 class="hero-title">The Play About<em>My Father</em></h1>
       <p class="hero-sub">Singing, mime, dance, and a dozen voices. Ten years in the making. One performer's love letter to the community who showed up when it mattered most.</p>
       <div class="hero-quotes">
         <div class="hq"><b>A preternaturally gifted performer telling an achingly human, uplifting story.</b><span>Willamette Week</span></div>
@@ -295,12 +313,35 @@
   </div>
 </section>
 
+<section class="section audience" id="audience" aria-label="Audience reactions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">From the Audience</div>
+      <h2>What people said on the way out.</h2>
+    </div>
+  </div>
+  <div class="aq-viewport reveal" tabindex="0" aria-label="Audience quotes. Hover or focus to pause.">
+    <div class="aq-track">
+        <figure class="aq"><blockquote>&ldquo;It's a one person Our Town, wilder than Thornton, with moments of raw emotion that will take your breath away. All of this in an hour and 10 minutes.&rdquo;</blockquote><figcaption>Ernie Lijoi</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;Thank you for a remarkable evening that will ring in my memory for years to come!&rdquo;</blockquote><figcaption>Fayra Teeters</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;It made me cry too. And laugh. Definitely worth going to see.&rdquo;</blockquote><figcaption>Greg Parkinson</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;I counted no less than 10 different characters with distinct voices, attitudes, and souls – even!&rdquo;</blockquote><figcaption>Fayra Teeters</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;Definitely go see this moving solo show by the phenomenal Kate Mura.&rdquo;</blockquote><figcaption>Shareen Jacobs</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;There is an amazing amount of kindness and compassion in the play.&rdquo;</blockquote><figcaption>Sandra de Helen</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;This version feels the most moving, with fluidity like water – easy transitions between the different folx represented – easy transitions between life &amp; afterlife.&rdquo;</blockquote><figcaption>Fayra Teeters</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;To me, sometimes theatre can get lost in a lot of bells and whistles, but there's nothing more spectacular than an authentic story, truthfully told. A loving tribute, indeed.&rdquo;</blockquote><figcaption>Ajai Tripathi</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;Run! Do not walk! To see Kate Mura's show at Fuse! The Play About My Father.&rdquo;</blockquote><figcaption>Chrisse Roccaro</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;I'm still hearing 'Nights in White Satin' in my head. Your singing voice has never sounded so clear, true and haunting.&rdquo;</blockquote><figcaption>Fayra Teeters</figcaption></figure>
+        <figure class="aq"><blockquote>&ldquo;This for me is theater at its best: funny, moving, poignant and performed by a master of transformation who transitions seamlessly from character to character, weaving a multi-threaded narrative about grief into a beautiful tapestry of gratitude.&rdquo;</blockquote><figcaption>Ernie Lijoi</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="bio">
   <div class="wrap">
     <div class="bio">
       <div class="bio-photo reveal">
-        <img src="images/kate-mura-headshot.jpg" alt="Portrait of Kate Mura, wide-eyed and mid-expression.">
-        <div class="cap">Photo: Gary Norman</div>
+        <img src="kate-mura-headshot-2026.jpg" alt="Headshot of Kate Mura, smiling, with long red hair.">
       </div>
       <div class="bio-copy reveal">
         <div class="eyebrow">The Artist</div>
@@ -330,6 +371,7 @@
       <div class="pb-item"><div class="pb-role">Performer / Creator</div><div class="pb-name">Kate Mura</div></div>
       <div class="pb-item"><div class="pb-role">Director / Mise en Scène Designer</div><div class="pb-name">Rusty Tennant</div></div>
       <div class="pb-item"><div class="pb-role">Costume Design</div><div class="pb-name">Jessica Kroeze</div></div>
+      <div class="pb-item"><div class="pb-role">Voiceover</div><div class="pb-name">Janet Mura &amp; Kate Mura</div></div>
       <div class="pb-item"><div class="pb-role">Producers</div><div class="pb-name">Fuse Theatre Ensemble &amp; Kate's Theatrics LLC</div></div>
       <div class="pb-item"><div class="pb-role">Production Photography</div><div class="pb-name">Greg Parkinson</div></div>
     </div>
@@ -433,8 +475,16 @@
   },{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
+  (function(){
+    var t = document.querySelector('.aq-track');
+    if(!t) return;
+    Array.prototype.slice.call(t.children).forEach(function(n){
+      var c = n.cloneNode(true); c.setAttribute('aria-hidden','true'); t.appendChild(c);
+    });
+  })();
+
   var CAST = [
-    {name:"Stella", role:"Great-aunt, narrator",
+    {name:"Stella", role:"Great-aunt, narrator", img:"cast-stella.jpg",
      desc:"Jovial and babushka-wearing, Stella carries the story. She has seen her share of tragedy but stays delighted by humanity, and chortles remembering how she snuck food from the racetrack buffet to help stretch the family's budget."},
     {name:"Tony", role:"Family friend",
      desc:"Keeper of the famous lasagna. In the show's opening vision of the afterlife, the line to the Pearly Gates never moves, and that is fine, because the people you love are there and occasionally Tony cooks."},
@@ -457,12 +507,15 @@
 
   function render(i){
     var c = CAST[i];
+    var photo = c.img ?
+      '<div><img class="cast-photo" src="' + c.img + '" alt="Kate Mura as ' + c.name + '."><div class="cast-photo-cap">Photo: Greg Parkinson</div></div>' : '';
     stage.innerHTML =
-      '<div class="cast-fade">' +
+      '<div class="cast-fade cast-card' + (c.img ? ' has-photo' : '') + '">' + photo +
+      '<div>' +
       '<div class="cast-name">' + c.name + '</div>' +
       '<div class="cast-role">' + c.role + '</div>' +
       '<p class="cast-desc">' + c.desc + '</p>' +
-      '</div>';
+      '</div></div>';
     Array.prototype.forEach.call(list.children, function(b, bi){
       if(bi === i){ b.classList.add('active'); b.setAttribute('aria-selected','true'); }
       else { b.classList.remove('active'); b.setAttribute('aria-selected','false'); }

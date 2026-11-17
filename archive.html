@@ -202,7 +202,7 @@
   /* ---------- STORY (mask theft) ---------- */
   .story{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:center; }
   .story-art{ position:relative; }
-  .story-art img{ border:1px solid var(--line); }
+  .story-art img{ border:1px solid var(--line); width:100%; height:auto; object-fit:contain; }
   .story-copy p{ color:var(--parchment); font-size:1.05rem; }
   .story-copy p.big{ font-family:'Fraunces',serif; font-style:italic; font-size:1.5rem; color:var(--brass-bright); font-weight:500; line-height:1.35; }
   @media (max-width:860px){ .story{ grid-template-columns:1fr; gap:36px; } .story-art{order:2;} .story-copy{order:1;} }
@@ -219,7 +219,7 @@
   .tl-body p{ margin:0; color:var(--parchment); font-size:0.96rem; opacity:0.85; }
 
   /* ---------- PRESS ---------- */
-  .press-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .press-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
   .press-card{ background:var(--ink); padding:32px 26px; display:flex; flex-direction:column; justify-content:space-between; min-height:230px; }
   .press-card p{ font-family:'Fraunces',serif; font-style:italic; font-size:1.15rem; color:var(--bone); font-weight:500; line-height:1.45; }
   .press-card cite{ font-style:normal; display:block; margin-top:18px; font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--brass-bright); }
@@ -255,8 +255,8 @@
   @media (max-width:720px){ .fuse-block{ grid-template-columns:1fr; } .fuse-block img{ width:90px; } }
 
   /* ---------- GALLERY ---------- */
-  .gallery{ display:grid; grid-template-columns:1.3fr 1fr; gap:16px; }
-  .gallery img{ width:100%; height:100%; object-fit:cover; border:1px solid var(--line); }
+  .gallery{ columns:3 260px; column-gap:16px; }
+  .gallery img{ width:100%; height:auto; border:1px solid var(--line); margin:0 0 16px; break-inside:avoid; }
   .gallery .gcol{ display:grid; gap:16px; }
   @media (max-width:720px){ .gallery{ grid-template-columns:1fr; } }
 
@@ -353,7 +353,7 @@
   <div class="wrap">
     <div class="story">
       <div class="story-art reveal">
-        <img src="images/suburban-tribe-poster-split.jpg" alt="Split-image poster of Kate Mura for Suburban Tribe: Unmasked.">
+        <img src="images/suburban-tribe-avignon-2015.jpg" alt="Suburban Tribe: Unmasked poster art: Kate Mura lowering a painted mask, with a row of suburban houses in silhouette.">
       </div>
       <div class="story-copy reveal">
         <div class="eyebrow">How the Story Began</div>
@@ -448,6 +448,10 @@
         <p>"She performed (or rather took the form of) eight different characters from the community, each telling the story from their own point of view."</p>
         <cite>The Penning Girl</cite>
       </div>
+      <div class="press-card">
+        <p>"What the small audience got was a dramatic tour-de-force from Kate Mura... Entertaining, funny and poignant, this is Adelaide Festival worthy fare at Fringe prices – one not to miss."</p>
+        <cite>Bert R., Adelaide Fringe, 2014</cite>
+      </div>
     </div>
   </div>
 </section>
@@ -515,11 +519,15 @@
     </div>
 
     <div class="gallery reveal">
-      <img src="images/suburban-tribe-avignon-2015.jpg" alt="Suburban Tribe: Unmasked poster art: Kate Mura lowering a painted mask, with a row of suburban houses in silhouette.">
-      <div class="gcol">
-        <img src="images/suburban-tribe-poster-masks.jpg" alt="Suburban Tribe poster art featuring Kate Mura surrounded by ornate masks.">
-        <img src="images/suburban-tribe-poster-split.jpg" alt="Suburban Tribe: Unmasked poster, split portrait of Kate Mura.">
-      </div>
+      <img src="road-01.jpg" alt="Kate Mura in a red dress, smiling and touching the nose of a red commedia mask. 2015." loading="lazy">
+      <img src="road-02.jpg" alt="Kate Mura in a red dress, kissing the forehead of a red commedia mask. 2015." loading="lazy">
+      <img src="road-03.jpg" alt="Kate Mura in a red dress, holding a red commedia mask and smiling at it. 2015." loading="lazy">
+      <img src="road-04.jpg" alt="Kate Mura in a red headscarf and mask, waving, Adelaide Fringe." loading="lazy">
+      <img src="road-05.jpg" alt="Kate Mura in a red headscarf and mask, holding a ticket, Adelaide Fringe." loading="lazy">
+      <img src="road-06.jpg" alt="Kate Mura in mask beside a BankSA Support Acts sign, Adelaide Fringe." loading="lazy">
+      <img src="road-07.jpg" alt="Kate Mura in a yellow cap and mask inside a BankSA branch, Adelaide Fringe." loading="lazy">
+      <img src="images/suburban-tribe-poster-masks.jpg" alt="Suburban Tribe poster art featuring ornate masks." loading="lazy">
+      <img src="images/suburban-tribe-poster-split.jpg" alt="Suburban Tribe poster art detail with a mask and the show title." loading="lazy">
     </div>
 
     <div class="archive-cta reveal" style="margin-top:56px; background:rgba(239,230,216,0.04); border:1px solid var(--line); padding:40px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
