@@ -484,19 +484,19 @@
   })();
 
   var CAST = [
-    {name:"Stella", role:"Great-aunt, narrator", img:"cast-stella.jpg",
+    {name:"Stella", role:"Great-aunt, narrator", img:"cast-stella.jpg", credit:"Greg Parkinson",
      desc:"Jovial and babushka-wearing, Stella carries the story. She has seen her share of tragedy but stays delighted by humanity, and chortles remembering how she snuck food from the racetrack buffet to help stretch the family's budget."},
-    {name:"Tony", role:"Family friend",
+    {name:"Tony", role:"Family friend", img:"cast-tony.jpg", credit:"Greg Parkinson",
      desc:"Keeper of the famous lasagna. In the show's opening vision of the afterlife, the line to the Pearly Gates never moves, and that is fine, because the people you love are there and occasionally Tony cooks."},
     {name:"Jim", role:"Her father",
      desc:"Hurt in a freak accident in the ocean. Mura portrays him as moving light behind her suggests shifting clouds and the foam of the water, an image the show returns to again and again."},
-    {name:"The Aunts", role:"Family",
-     desc:"Part of the biological and chosen family who closed ranks around the Muras. Mura moves between them by voice and body alone, with no costume change to lean on."},
-    {name:"The Neighbors", role:"Community",
-     desc:"The New Jersey neighborhood that showed up. They are the reason the show exists: it is built as a thank-you to the people who quietly carried a family through the worst of it."},
-    {name:"The Priest", role:"Community",
+    {name:"Helen", role:"Family", img:"cast-helen.jpg", credit:"Greg Parkinson",
+     desc:"Part of the biological and chosen family who closed ranks around the Muras. Mura becomes her by voice and body alone, with no costume change to lean on."},
+    {name:"The Best Friends", role:"Friends", img:"cast-best-friends.jpg", credit:"Greg Parkinson",
+     desc:"The friends who showed up. They are the reason the show exists: it is built as a thank-you to the people who quietly carried a family through the worst of it."},
+    {name:"The Priest", role:"Community", img:"cast-priest.jpg", credit:"Greg Parkinson",
      desc:"One more voice in a town's worth of them, drawn with the same generosity the show extends to everyone in it."},
-    {name:"Kate", role:"Herself, briefly",
+    {name:"Kate", role:"Herself, briefly", img:"cast-kate.jpg", credit:"Greg Parkinson",
      desc:"She appears as herself only for a moment. The choice keeps the piece from becoming a monologue about her, and keeps it about the people who showed up."}
   ];
 
@@ -508,7 +508,7 @@
   function render(i){
     var c = CAST[i];
     var photo = c.img ?
-      '<div><img class="cast-photo" src="' + c.img + '" alt="Kate Mura as ' + c.name + '."><div class="cast-photo-cap">Photo: Greg Parkinson</div></div>' : '';
+      '<div><img class="cast-photo" src="' + c.img + '" alt="Kate Mura as ' + c.name + '.">' + (c.credit ? '<div class="cast-photo-cap">Photo: ' + c.credit + '</div>' : '') + '</div>' : '';
     stage.innerHTML =
       '<div class="cast-fade cast-card' + (c.img ? ' has-photo' : '') + '">' + photo +
       '<div>' +
