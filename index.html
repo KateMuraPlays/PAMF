@@ -153,6 +153,11 @@
   .bio-copy .lede{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--ember-bright);font-weight:500;}
   .bio-copy p{color:var(--sand);font-size:1.01rem;}
   .credit-list{list-style:none;margin:22px 0 0;padding:0;}
+  .artist-link{color:inherit;text-decoration:none;border-bottom:1px solid rgba(244,178,102,0.5);}
+  .artist-link:hover{color:var(--bone);border-bottom-color:var(--bone);}
+  .learn-more{margin-top:14px;}
+  .learn-more a{color:var(--glow);text-underline-offset:3px;}
+  .learn-more a:hover{color:var(--bone);}
   .credit-list li{padding:12px 0;border-top:1px solid var(--line);font-size:0.96rem;color:var(--sand);}
   .credit-list li:last-child{border-bottom:1px solid var(--line);}
   @media (max-width:880px){.bio{grid-template-columns:1fr;gap:30px;}.bio-photo{max-width:270px;}}
@@ -183,10 +188,10 @@
   .contact h2{font-size:clamp(2.2rem,5vw,3.5rem);max-width:16ch;}
   .contact-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:36px;margin-top:38px;}
   .contact-links{display:flex;flex-direction:column;gap:10px;}
-  .contact-links a{font-family:'Fraunces',serif;font-size:1.3rem;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
-  .contact-links a:hover{border-color:var(--bone);}
-  .contact-note{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.05em;color:rgba(248,242,231,0.68);max-width:34ch;}
-  footer{padding:24px 0;text-align:center;font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(251,241,232,0.55);background:#9E4630;}
+  .contact-links a{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;color:var(--bone);text-decoration:underline;text-decoration-color:rgba(251,241,232,0.45);text-underline-offset:5px;transition:color .2s,text-decoration-color .2s;}
+  .contact-links a:hover{color:#FFE2B8;text-decoration-color:#FFE2B8;}
+  .contact-note{font-family:'Space Mono',monospace;font-weight:700;font-size:1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--glow);display:inline-block;padding:14px 20px;max-width:none;align-self:start;}
+  footer{padding:24px 0;text-align:center;font-family:'Space Mono',monospace;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);background:#9E4630;}
   .gallery-actions{margin-top:22px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
   .gallery-actions .gallery-note{margin-top:0;}
 </style>
@@ -344,18 +349,19 @@
         <img src="kate-mura-headshot-2026.jpg" alt="Headshot of Kate Mura, smiling, with long red hair.">
       </div>
       <div class="bio-copy reveal">
-        <div class="eyebrow">The Artist</div>
+        <div class="eyebrow"><a class="artist-link" href="https://katemura.com/experience/" target="_blank" rel="noopener">The Artist</a></div>
         <p class="lede">Transformation is my passion…</p>
         <p>Kate Mura is a true theatre multi-hyphenate working towards a 2027 designation in Linklater Voice. She chooses theatre as her life's work because it constantly proves that creating other worlds <em>is</em> possible, and it's her quest, in life and art, to help build the world she wants to live in: one that's beautiful. Equitable &amp; ethical. Sustainable. Timely.</p>
         <ul class="credit-list">
+          <li>Performed in over 100 professional productions from Shakespeare leads to devised experimental new works, traditional comedy, and queer dramas</li>
           <li>Backup dancer for Salt-N-Pepa at CityKids Foundation's Tenth Anniversary Gala</li>
           <li>Danced with President Bill Clinton at the Presidential Summit for America's Future</li>
           <li>Coached William Hurt in neutral mask for <em>No Man's Land</em> at Artists Repertory Theatre</li>
-          <li>Played The Library Lady in <em>Tomás and the Library Lady</em> with Oregon Children's Theatre</li>
           <li>Toured ten states with Tears of Joy Theatre in <em>The Reluctant Dragon</em>, <em>Pinocchio</em>, and <em>When Animals Were People</em></li>
           <li>Recipient of the Leslie O. Fulton Fellowship</li>
         </ul>
         <p style="margin-top:22px;opacity:0.85;">When she's not in a theatre, she can be found exploring her surroundings, reading tarot cards, and being naked in nature.</p>
+        <p class="learn-more">To learn more, please visit <a href="https://katemura.com/experience/" target="_blank" rel="noopener">this link</a>.</p>
       </div>
     </div>
   </div>
@@ -488,7 +494,7 @@
      desc:"Jovial and babushka-wearing, Stella carries the story. She has seen her share of tragedy but stays delighted by humanity, and chortles remembering how she snuck food from the racetrack buffet to help stretch the family's budget."},
     {name:"Tony", role:"Family friend", img:"cast-tony.jpg", credit:"Greg Parkinson",
      desc:"Keeper of the famous lasagna. In the show's opening vision of the afterlife, the line to the Pearly Gates never moves, and that is fine, because the people you love are there and occasionally Tony cooks."},
-    {name:"Jim", role:"Her father",
+    {name:"Jim", img:"cast-jim.jpg", credit:"Greg Parkinson", role:"Her father",
      desc:"Hurt in a freak accident in the ocean. Mura portrays him as moving light behind her suggests shifting clouds and the foam of the water, an image the show returns to again and again."},
     {name:"Helen", role:"Family", img:"cast-helen.jpg", credit:"Greg Parkinson",
      desc:"Part of the biological and chosen family who closed ranks around the Muras. Mura becomes her by voice and body alone, with no costume change to lean on."},
